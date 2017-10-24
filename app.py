@@ -8,7 +8,7 @@ app = Flask(__name__)
 @app.route('/')
 def index():
 
-    response        = urllib2.urlopen('https://inventory.data.gov/dataset/fb14072a-44fb-485a-bd67-f8950444896d/resource/a25af1dc-a56a-42e2-a5d1-cda287546361/download/costsavings.json')
+    response        = urllib2.urlopen('https://data.maryland.gov/api/views/x86q-r6kv/rows.json?accessType=DOWNLOAD')
     data  = json.load(response)
 
     ticker_data         = data["ticker"]
